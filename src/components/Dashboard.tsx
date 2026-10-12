@@ -25,6 +25,7 @@ import {
 import { Category, UniversalPlatform, UserProgress } from '../types';
 import { CATEGORIES, UNIVERSAL_PLATFORMS } from '../data/learningDirectory';
 import { AdSlot } from './AdSlot';
+import { AboutWebsiteNotice } from './AboutWebsiteNotice';
 
 interface DashboardProps {
   progress: UserProgress;
@@ -148,6 +149,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
           </button>
         </div>
       </div>
+
+      {/* Prominent About This Website Guide Note */}
+      <AboutWebsiteNotice />
 
       {/* 2. Top Carousel / "Course in Progress" (matching visual reference screenshot) */}
       <section aria-labelledby="current-topics-heading">
@@ -413,6 +417,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 <div className="shrink-0 sm:self-center">
                   <a
                     href={plat.url}
+                    data-link-title={plat.name}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 px-3.5 py-1.5 text-xs font-bold text-stone-900 transition-colors shadow-2xs"

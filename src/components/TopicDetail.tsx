@@ -303,6 +303,7 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
                       {/* Visit Link (External in new tab) */}
                       <a
                         href={link.url}
+                        data-link-title={link.title}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 px-4 py-2 text-xs font-bold text-stone-900 min-h-[44px] transition-colors shadow-2xs"

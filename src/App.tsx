@@ -17,6 +17,7 @@ import { PlatformsView } from './components/PlatformsView';
 import { LegalPages } from './components/LegalPages';
 import { Footer } from './components/Footer';
 import { ReportModal } from './components/ReportModal';
+import { ExternalLinkConfirmModal } from './components/ExternalLinkConfirmModal';
 import { CATEGORIES } from './data/learningDirectory';
 import { 
   getStoredProgress, 
@@ -36,6 +37,71 @@ export default function App() {
   // Modals state
   const [isReportOpen, setIsReportOpen] = useState(false);
   const [reportTarget, setReportTarget] = useState({ title: '', url: '' });
+  const [pendingExternalLink, setPendingExternalLink] = useState<{ url: string; title?: string } | null>(null);
+
+  // Intercept all external link clicks to show confirmation modal
+  useEffect(() => {
+    const handleDocumentClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      const anchor = target.closest('a');
+      if (!anchor) return;
+
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      // Ignore local hash, mailto, tel, javascript
+      if (
+        href.startsWith('#') || 
+        href.startsWith('mailto:') || 
+        href.startsWith('tel:') || 
+        href.startsWith('javascript:')
+      ) {
+        return;
+      }
+
+      // Check if it's an external URL
+      if (href.startsWith('http://') || href.startsWith('https://')) {
+        try {
+          const urlObj = new URL(href, window.location.href);
+          if (urlObj.origin !== window.location.origin) {
+            // Prevent immediate navigation
+            e.preventDefault();
+            e.stopPropagation();
+
+            const title = 
+              anchor.getAttribute('data-link-title') || 
+              anchor.getAttribute('title') || 
+              anchor.getAttribute('aria-label') || 
+              anchor.textContent?.trim() || 
+              urlObj.hostname;
+
+            setPendingExternalLink({ url: href, title });
+          }
+        } catch {
+          // If URL parsing fails, let standard navigation happen
+        }
+      }
+    };
+
+    // Capture phase listener to intercept before child handlers or default link clicks
+    document.addEventListener('click', handleDocumentClick, true);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick, true);
+    };
+  }, []);
+
+  const handleConfirmExternalLink = () => {
+    if (pendingExternalLink?.url) {
+      window.open(pendingExternalLink.url, '_blank', 'noopener,noreferrer');
+    }
+    setPendingExternalLink(null);
+  };
+
+  const handleCancelExternalLink = () => {
+    setPendingExternalLink(null);
+  };
 
   // Sync state from storage
   useEffect(() => {
@@ -199,6 +265,14 @@ export default function App() {
         onClose={() => setIsReportOpen(false)}
         linkTitle={reportTarget.title}
         linkUrl={reportTarget.url}
+      />
+
+      <ExternalLinkConfirmModal
+        isOpen={!!pendingExternalLink}
+        targetUrl={pendingExternalLink?.url || ''}
+        targetTitle={pendingExternalLink?.title}
+        onConfirm={handleConfirmExternalLink}
+        onCancel={handleCancelExternalLink}
       />
     </div>
   );

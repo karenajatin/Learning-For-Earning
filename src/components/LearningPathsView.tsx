@@ -104,6 +104,7 @@ export const LearningPathsView: React.FC<LearningPathsViewProps> = ({
                 <div className="flex items-center justify-between pt-1">
                   <a
                     href={stage.recommendedLink}
+                    data-link-title={`${stage.stageName} - Recommended Starting Link`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-xl bg-white hover:bg-amber-50 px-3.5 py-1.5 text-xs font-bold text-amber-900 border border-stone-200 shadow-2xs transition-colors"

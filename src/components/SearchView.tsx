@@ -206,6 +206,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
 
                   <a
                     href={link.url}
+                    data-link-title={link.title}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 px-3.5 py-2 text-xs font-bold text-stone-900 min-h-[44px] transition-colors shadow-2xs"

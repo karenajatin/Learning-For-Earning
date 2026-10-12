@@ -112,6 +112,7 @@ export const PlatformsView: React.FC = () => {
 
               <a
                 href={plat.url}
+                data-link-title={plat.name}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 px-4 py-2 text-xs font-bold text-stone-900 shadow-2xs transition-colors"
