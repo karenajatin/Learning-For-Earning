@@ -1,0 +1,6 @@
+{
+  "name": "LearnFree Hub",
+  "description": "A curated free learning directory where students and adults find the best free websites, courses, and resources for every skill.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
