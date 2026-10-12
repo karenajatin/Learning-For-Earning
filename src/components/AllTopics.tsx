@@ -16,7 +16,11 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
-  Filter
+  Filter,
+  Monitor,
+  FileSpreadsheet,
+  Brain,
+  Wrench
 } from 'lucide-react';
 import { Category, CategoryGroup, UserProgress } from '../types';
 import { CATEGORIES } from '../data/learningDirectory';
@@ -34,7 +38,7 @@ export const AllTopics: React.FC<AllTopicsProps> = ({
   const [selectedGroup, setSelectedGroup] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const groups = ['All', 'Technology', 'Academics', 'Creative', 'Business', 'Life Skills'];
+  const groups = ['All', 'Technology', 'Academics', 'Creative', 'Business', 'Life Skills', 'Universal'];
 
   const filteredCategories = CATEGORIES.filter(cat => {
     const matchesGroup = selectedGroup === 'All' || cat.group === selectedGroup;
@@ -60,6 +64,10 @@ export const AllTopics: React.FC<AllTopicsProps> = ({
       case 'BookOpen': return BookOpen;
       case 'HeartPulse': return HeartPulse;
       case 'GraduationCap': return GraduationCap;
+      case 'Monitor': return Monitor;
+      case 'FileSpreadsheet': return FileSpreadsheet;
+      case 'Brain': return Brain;
+      case 'Wrench': return Wrench;
       default: return Sparkles;
     }
   };

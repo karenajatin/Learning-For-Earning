@@ -15,7 +15,12 @@ import {
   Palette, 
   TrendingUp, 
   ShieldCheck, 
-  HeartHandshake
+  HeartHandshake,
+  Monitor,
+  FileSpreadsheet,
+  Brain,
+  Wrench,
+  GraduationCap
 } from 'lucide-react';
 import { Category, UniversalPlatform, UserProgress } from '../types';
 import { CATEGORIES, UNIVERSAL_PLATFORMS } from '../data/learningDirectory';
@@ -109,6 +114,11 @@ export const Dashboard: React.FC<DashboardProps> = ({
       case 'Languages': return Languages;
       case 'Palette': return Palette;
       case 'TrendingUp': return TrendingUp;
+      case 'Monitor': return Monitor;
+      case 'FileSpreadsheet': return FileSpreadsheet;
+      case 'Brain': return Brain;
+      case 'Wrench': return Wrench;
+      case 'GraduationCap': return GraduationCap;
       default: return Layers;
     }
   };
