@@ -63,7 +63,7 @@ export const ExternalLinkConfirmModal: React.FC<ExternalLinkConfirmModalProps> =
                 External Link Notice
               </span>
               <h2 id="external-link-modal-title" className="text-lg sm:text-xl font-extrabold text-stone-900 mt-0.5">
-                તમે બાહ્ય વેબસાઇટ પર જઈ રહ્યા છો
+                You Are Leaving Our Website
               </h2>
             </div>
           </div>
@@ -76,16 +76,16 @@ export const ExternalLinkConfirmModal: React.FC<ExternalLinkConfirmModalProps> =
           </button>
         </div>
 
-        {/* Core Gujarati Warning Message as requested */}
+        {/* Warning Message */}
         <div className="mt-4 p-4 rounded-2xl bg-amber-50/80 border border-amber-200/70 text-stone-900">
           <div className="flex items-start gap-2.5">
             <AlertTriangle className="h-5 w-5 text-amber-700 shrink-0 mt-0.5" />
             <div>
               <p className="text-sm sm:text-base font-bold text-amber-950 leading-snug">
-                તમે અમારી વેબસાઇટ છોડીને બીજી વેબસાઇટમાં પ્રવેશ કરી રહ્યા છો.
+                You are leaving our website and entering an external website.
               </p>
               <p className="text-xs text-stone-600 mt-1">
-                You are about to leave LearnFree Hub and navigate to an external website.
+                All learning, content, accounts, and policies belong directly to the external provider.
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ export const ExternalLinkConfirmModal: React.FC<ExternalLinkConfirmModalProps> =
             <span className="truncate">{targetUrl}</span>
           </div>
           <p className="text-[11px] text-stone-500 leading-relaxed pt-1">
-            LearnFree Hub does not own or control third-party content. All learning, privacy policies, and terms apply to the destination provider (<span className="font-semibold text-stone-700">{domain}</span>).
+            Learning For Earning does not own or control third-party content. All learning, privacy policies, and terms apply to the destination provider (<span className="font-semibold text-stone-700">{domain}</span>).
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export const ExternalLinkConfirmModal: React.FC<ExternalLinkConfirmModalProps> =
             onClick={onCancel}
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-stone-300 bg-white text-stone-700 font-bold text-xs sm:text-sm hover:bg-stone-50 transition-colors cursor-pointer"
           >
-            ના, અહીં જ રહો (Cancel)
+            No, Stay Here (Cancel)
           </button>
           <button
             type="button"
@@ -125,7 +125,7 @@ export const ExternalLinkConfirmModal: React.FC<ExternalLinkConfirmModalProps> =
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-500 text-stone-900 font-extrabold text-xs sm:text-sm shadow-sm transition-all cursor-pointer"
           >
             <Check className="h-4 w-4 text-stone-900" />
-            <span>હા, આગળ વધો (Yes, Proceed)</span>
+            <span>Yes, Proceed to Website</span>
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>

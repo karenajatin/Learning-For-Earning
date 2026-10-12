@@ -27,7 +27,7 @@ export const AdSlot: React.FC<AdSlotProps> = ({
           {label}
         </span>
         <div className="text-xs text-amber-900/60 max-w-md">
-          LearnFree Hub is supported by educational community sponsors. All learning resources listed remain 100% free to learners.
+          Learning For Earning is supported by educational community sponsors. All learning resources listed remain 100% free to learners.
         </div>
         {/* Placeholder tag where actual <ins class="adsbygoogle" ...> will render */}
         <div className="mt-2 text-[10px] text-amber-700/40 font-mono tracking-tight">

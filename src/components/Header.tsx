@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-400 text-stone-900 shadow-xs">
           <Sparkles className="h-5 w-5" />
         </div>
-        <span className="font-extrabold text-sm text-stone-900">LearnFree</span>
+        <span className="font-extrabold text-sm text-stone-900">Learning For Earning</span>
       </div>
 
       {/* Center / Left Search Bar */}

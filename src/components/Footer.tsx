@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <Sparkles className="h-4 w-4" />
               </div>
               <span className="text-base font-extrabold text-stone-900 tracking-tight">
-                LearnFree Hub
+                Learning For Earning
               </span>
             </div>
             <p className="mt-1 text-xs text-stone-500 max-w-sm">
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Bottom Attribution & Notice */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-stone-600">
           <div>
-            © {new Date().getFullYear()} LearnFree Hub. All recommended third-party course materials and trademarks belong to their respective institutions.
+            © {new Date().getFullYear()} Learning For Earning. All recommended third-party course materials and trademarks belong to their respective institutions.
           </div>
           <div className="flex items-center gap-1.5 text-stone-600">
             <span>Built for open lifelong learning</span>

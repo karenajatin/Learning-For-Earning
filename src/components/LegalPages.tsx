@@ -49,21 +49,21 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
               Our Mission & Educational Commitment
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-900">
-              About LearnFree Hub
+              About Learning For Earning
             </h1>
             <p className="mt-2 text-sm text-stone-600 leading-relaxed">
-              LearnFree Hub was built with a singular premise: quality education should never be gated behind paywalls, predatory subscription traps, or deceptive trial periods.
+              Learning For Earning was built with a singular premise: quality education should never be gated behind paywalls, predatory subscription traps, or deceptive trial periods.
             </p>
           </div>
 
           <div className="rounded-[22px] bg-white p-6 sm:p-8 border border-stone-200/80 shadow-xs space-y-6 text-xs sm:text-sm text-stone-700 leading-relaxed">
             <section className="space-y-2">
-              <h2 className="text-base font-bold text-stone-900">Why LearnFree Hub Exists</h2>
+              <h2 className="text-base font-bold text-stone-900">Why Learning For Earning Exists</h2>
               <p>
                 The modern internet is flooded with online courses, yet discovering genuinely free, university-grade educational material has become increasingly challenging. Search engine results are dominated by commercial bootcamps charging thousands of dollars or platforms disguising 7-day trials as "free learning."
               </p>
               <p>
-                LearnFree Hub acts as an independent, educator-curated directory. We filter out the commercial noise and maintain the top 3–4 highest quality, completely free learning links for every essential academic and practical skill.
+                Learning For Earning acts as an independent, educator-curated directory. We filter out the commercial noise and maintain the top 3–4 highest quality, completely free learning links for every essential academic and practical skill.
               </p>
             </section>
 
@@ -103,7 +103,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">Client-Side Privacy Guarantee</h2>
               <p>
-                LearnFree Hub requires no user account, no password, and no server-side user tracking. Your learning checklists, started topics, and study streaks are saved strictly inside your local browser storage (<code className="bg-stone-100 px-1 py-0.5 rounded text-amber-900 font-mono text-xs">localStorage</code>).
+                Learning For Earning requires no user account, no password, and no server-side user tracking. Your learning checklists, started topics, and study streaks are saved strictly inside your local browser storage (<code className="bg-stone-100 px-1 py-0.5 rounded text-amber-900 font-mono text-xs">localStorage</code>).
               </p>
             </section>
           </div>
@@ -189,7 +189,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
                       rows={5}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Include the platform name, URL, and a brief description of why it belongs in LearnFree Hub..."
+                      placeholder="Include the platform name, URL, and a brief description of why it belongs in Learning For Earning..."
                       className="w-full rounded-xl border border-stone-200 bg-stone-50/50 p-3.5 text-xs text-stone-900 placeholder:text-stone-400 focus:bg-white focus:border-amber-400 focus:outline-hidden"
                     />
                   </div>
@@ -245,7 +245,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2">
               <h2 className="text-base font-bold text-stone-900">1. Commitment to User Privacy</h2>
               <p>
-                At LearnFree Hub (<span className="font-semibold">"learnfreehub.org"</span>), the privacy of our visitors is of paramount importance to us. This Privacy Policy document outlines the types of personal and non-personal information received and collected by LearnFree Hub and how it is used.
+                At Learning For Earning (<span className="font-semibold">"our website"</span>), the privacy of our visitors is of paramount importance to us. This Privacy Policy document outlines the types of personal and non-personal information received and collected by Learning For Earning and how it is used.
               </p>
               <p>
                 We do not require user accounts, passwords, or personal profile registrations to access any part of our free learning directory.
@@ -255,30 +255,30 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">2. Browser Local Storage (<code className="font-mono text-amber-900">localStorage</code>)</h2>
               <p>
-                LearnFree Hub stores your topic progress, checklist completions, and bookmarked links strictly on your local device using standard browser <code className="bg-stone-100 px-1 py-0.5 rounded text-xs font-mono">localStorage</code>. This data never leaves your device and is not transmitted to our servers. You can clear this data at any time through your browser settings or our reset control.
+                Learning For Earning stores your topic progress, checklist completions, and bookmarked links strictly on your local device using standard browser <code className="bg-stone-100 px-1 py-0.5 rounded text-xs font-mono">localStorage</code>. This data never leaves your device and is not transmitted to our servers. You can clear this data at any time through your browser settings or our reset control.
               </p>
             </section>
 
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">3. Cookies, Google AdSense & Advertising</h2>
               <p>
-                LearnFree Hub uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to customize web page content based upon visitors' browser type or other information that the visitor sends via their browser.
+                Learning For Earning uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to customize web page content based upon visitors' browser type or other information that the visitor sends via their browser.
               </p>
               <p>
                 <strong>Google AdSense & DoubleClick DART Cookie:</strong>
               </p>
               <ul className="list-disc list-inside space-y-1.5 pl-2 text-stone-600">
-                <li>Google, as a third-party vendor, uses cookies to serve advertisements on LearnFree Hub.</li>
-                <li>Google's use of the DART cookie enables it to serve ads to users based on their visit to LearnFree Hub and other sites across the internet.</li>
+                <li>Google, as a third-party vendor, uses cookies to serve advertisements on Learning For Earning.</li>
+                <li>Google's use of the DART cookie enables it to serve ads to users based on their visit to Learning For Earning and other sites across the internet.</li>
                 <li>Users may opt out of the use of the DART cookie by visiting the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-amber-800 underline font-semibold">Google Ad and Content Network Privacy Policy</a>.</li>
-                <li>Third-party ad servers or ad networks use technology in their respective advertisements and links that appear on LearnFree Hub, which are sent directly to your browser. They automatically receive your IP address when this occurs.</li>
+                <li>Third-party ad servers or ad networks use technology in their respective advertisements and links that appear on Learning For Earning, which are sent directly to your browser. They automatically receive your IP address when this occurs.</li>
               </ul>
             </section>
 
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">4. Google Analytics & Log Files</h2>
               <p>
-                Like most standard website servers, LearnFree Hub may utilize Google Analytics or standard web logs. Information collected includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, platform type, date/time stamp, and number of clicks. This information is used solely to analyze trends, administer the site, track users' aggregate movement, and gather broad demographic information. IP addresses are not linked to personally identifiable information.
+                Like most standard website servers, Learning For Earning may utilize Google Analytics or standard web logs. Information collected includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, platform type, date/time stamp, and number of clicks. This information is used solely to analyze trends, administer the site, track users' aggregate movement, and gather broad demographic information. IP addresses are not linked to personally identifiable information.
               </p>
             </section>
 
@@ -297,7 +297,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">6. Third-Party Websites</h2>
               <p>
-                Our directory provides outgoing links to third-party educational websites (such as Khan Academy, MIT, Harvard edX, and OpenStax). LearnFree Hub has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites. All external links open in a new tab with <code className="bg-stone-100 px-1 py-0.5 rounded text-xs font-mono">rel="noopener noreferrer"</code>.
+                Our directory provides outgoing links to third-party educational websites (such as Khan Academy, MIT, Harvard edX, and OpenStax). Learning For Earning has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites. All external links open in a new tab with <code className="bg-stone-100 px-1 py-0.5 rounded text-xs font-mono">rel="noopener noreferrer"</code>.
               </p>
             </section>
           </div>
@@ -312,7 +312,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
               Terms of Service
             </h1>
             <p className="mt-1 text-xs sm:text-sm text-stone-500">
-              Effective Date: October 2026 · Agreement for using LearnFree Hub
+              Effective Date: October 2026 · Agreement for using Learning For Earning
             </p>
           </div>
 
@@ -320,14 +320,14 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2">
               <h2 className="text-base font-bold text-stone-900">1. Acceptance of Terms</h2>
               <p>
-                By accessing and using LearnFree Hub, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
+                By accessing and using Learning For Earning, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
               </p>
             </section>
 
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">2. Directory Nature & Intellectual Property</h2>
               <p>
-                LearnFree Hub is a free educational directory and reference portal. We do not host, sell, or claim ownership of third-party course materials, textbooks, or video lectures linked on this platform. All trademarks, logos, course titles, and institutional names (such as MIT, Harvard, Khan Academy) belong to their respective copyright holders.
+                Learning For Earning is a free educational directory and reference portal. We do not host, sell, or claim ownership of third-party course materials, textbooks, or video lectures linked on this platform. All trademarks, logos, course titles, and institutional names (such as MIT, Harvard, Khan Academy) belong to their respective copyright holders.
               </p>
             </section>
 
@@ -341,7 +341,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-stone-900">4. Modifications & Availability</h2>
               <p>
-                LearnFree Hub strives to maintain continuous availability and link accuracy, but does not warrant that the website will operate uninterrupted or error-free. We reserve the right to modify or discontinue any curriculum or link without prior notice.
+                Learning For Earning strives to maintain continuous availability and link accuracy, but does not warrant that the website will operate uninterrupted or error-free. We reserve the right to modify or discontinue any curriculum or link without prior notice.
               </p>
             </section>
           </div>
@@ -368,7 +368,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2">
               <h2 className="text-base font-bold text-stone-900">1. General Educational Purposes Only</h2>
               <p>
-                All materials, links, articles, and roadmaps presented on LearnFree Hub are provided solely for general educational, academic, and informational purposes. None of the content constitutes professional advice.
+                All materials, links, articles, and roadmaps presented on Learning For Earning are provided solely for general educational, academic, and informational purposes. None of the content constitutes professional advice.
               </p>
             </section>
 
@@ -382,7 +382,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ pageType }) => {
             <section className="space-y-2 pt-2 border-t border-stone-100">
               <h2 className="text-base font-bold text-amber-900">3. Financial & Investment Disclaimer</h2>
               <p>
-                Information listed in the <strong>Finance & Investing</strong> section represents general economic principles and educational budgeting frameworks. LearnFree Hub is not a registered financial advisor or broker. Nothing on this website constitutes financial, tax, or investment advice. Always evaluate personal financial risk and consult qualified financial professionals.
+                Information listed in the <strong>Finance & Investing</strong> section represents general economic principles and educational budgeting frameworks. Learning For Earning is not a registered financial advisor or broker. Nothing on this website constitutes financial, tax, or investment advice. Always evaluate personal financial risk and consult qualified financial professionals.
               </p>
             </section>
 

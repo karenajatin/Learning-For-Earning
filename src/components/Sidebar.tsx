@@ -76,10 +76,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <Sparkles className="h-6 w-6" />
           </div>
           <div>
-            <div className="text-lg font-extrabold tracking-tight text-stone-900 leading-none">
-              LearnFree<span className="text-amber-500">.</span>
+            <div className="text-sm font-extrabold tracking-tight text-stone-900 leading-tight">
+              Learning For Earning<span className="text-amber-500">.</span>
             </div>
-            <div className="text-[11px] font-semibold text-stone-600 mt-1">
+            <div className="text-[11px] font-semibold text-stone-500 mt-0.5">
               Hub of Free Education
             </div>
           </div>

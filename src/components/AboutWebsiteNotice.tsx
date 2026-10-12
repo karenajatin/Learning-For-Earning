@@ -32,7 +32,7 @@ export const AboutWebsiteNotice: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-200/70 px-2.5 py-0.5 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-amber-950">
                 <Sparkles className="h-3 w-3 text-amber-800" />
-                Guide Notice • માર્ગદર્શિકા
+                Official Guide Notice
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-stone-900 mt-0.5">
@@ -54,7 +54,7 @@ export const AboutWebsiteNotice: React.FC = () => {
       {/* Introductory statement */}
       <div className="mt-4 text-stone-800 text-sm sm:text-base leading-relaxed space-y-2">
         <p className="font-semibold text-stone-900">
-          LearnFree Hub does not teach skills itself. We do not host courses, videos, lessons, or exams.
+          Learning For Earning does not teach skills itself. We do not host courses, videos, lessons, or exams.
         </p>
         <p className="text-stone-700 text-xs sm:text-sm">
           Instead, we act as a guide. For each topic, we carefully select a few of the best free learning websites and show you the direct links, so you can find a trustworthy place to start without searching through thousands of results.

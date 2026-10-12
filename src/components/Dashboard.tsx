@@ -131,7 +131,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-900">
-              Welcome to LearnFree Hub 👋
+              Welcome to Learning For Earning 👋
             </h1>
           </div>
           <p className="mt-1 text-xs sm:text-sm text-stone-600 max-w-2xl leading-relaxed">
