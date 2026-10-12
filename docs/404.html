@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LearnFree Hub</title>
+    <script>
+      // Single Page redirect for GitHub Pages
+      var path = window.location.pathname;
+      var origin = window.location.origin;
+      // If deployed in /docs/ or root, navigate back to directory root
+      if (path.includes('/docs/')) {
+        var baseDocs = path.substring(0, path.indexOf('/docs/') + 6);
+        window.location.replace(origin + baseDocs);
+      } else {
+        var segments = path.split('/').filter(Boolean);
+        var baseRepo = segments.length > 0 ? '/' + segments[0] + '/' : '/';
+        window.location.replace(origin + baseRepo);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

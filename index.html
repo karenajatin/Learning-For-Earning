@@ -46,10 +46,20 @@
       "description": "Free open educational resource directory offering vetted learning paths in computer science, mathematics, humanities, and professional skills."
     }
     </script>
+    <!-- GitHub Pages fallback detector: if uncompiled root (/) is served, redirect to /docs/ -->
+    <script>
+      window.addEventListener('error', function(e) {
+        if (e.target && e.target.tagName === 'SCRIPT' && e.target.src && e.target.src.includes('main.tsx')) {
+          var p = window.location.pathname;
+          if (!p.endsWith('/')) p += '/';
+          window.location.replace(window.location.origin + p + 'docs/' + window.location.search + window.location.hash);
+        }
+      }, true);
+    </script>
   </head>
   <body class="bg-[#FAF8F5] text-[#2D2A26] antialiased min-h-screen selection:bg-amber-200 selection:text-amber-900">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
 
