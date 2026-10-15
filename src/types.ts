@@ -69,3 +69,37 @@ export interface UserProgress {
   lastActiveDate: string;
   weeklyTarget: number;
 }
+
+export type SkillProficiency = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+
+export interface UserSkill {
+  id: string;
+  name: string;
+  level: SkillProficiency;
+  category?: string;
+  verified?: boolean;
+}
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  title: string; // e.g. "Full Stack Developer", "Digital Marketer"
+  bio: string;
+  avatarSeed?: string;
+  earningGoal: string; // e.g. "$1,000/month", "Freelance Work", "First Remote Job"
+  location?: string;
+  portfolioUrl?: string;
+  githubUrl?: string;
+  linkedinUrl?: string;
+  skills: UserSkill[];
+  lastSyncedAt?: string;
+  createdAt: string;
+}
+
+export interface AuthState {
+  isLoggedIn: boolean;
+  user: UserProfile | null;
+  storageMode: 'local_device' | 'cloud_server';
+}
+

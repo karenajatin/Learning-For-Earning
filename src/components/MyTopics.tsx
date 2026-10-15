@@ -7,7 +7,9 @@ import {
   Flame, 
   RotateCcw,
   Sparkles,
-  Trash2
+  Trash2,
+  Smartphone,
+  Cloud
 } from 'lucide-react';
 import { Category, UserProgress } from '../types';
 import { CATEGORIES } from '../data/learningDirectory';
@@ -95,6 +97,19 @@ export const MyTopics: React.FC<MyTopicsProps> = ({
             <BookOpen className="h-4 w-4" />
             <span>Add More Topics</span>
           </button>
+        </div>
+      </div>
+
+      {/* Device Storage Status Notice */}
+      <div className="rounded-2xl bg-amber-50/70 border border-amber-200/80 p-3.5 flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex items-center gap-2.5 text-xs text-stone-700">
+          <div className="h-7 w-7 rounded-lg bg-amber-200/80 flex items-center justify-center text-amber-900 shrink-0">
+            <Smartphone className="h-4 w-4" />
+          </div>
+          <div>
+            <span className="font-bold text-stone-900">Device Local Storage Active: </span>
+            Your learning progress is saved safely on your device. Click the <span className="font-semibold text-amber-900">Login</span> button in the top navigation bar anytime to backup your progress to our servers and activate your skills profile!
+          </div>
         </div>
       </div>
 

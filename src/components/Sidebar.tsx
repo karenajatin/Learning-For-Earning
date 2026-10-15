@@ -28,6 +28,8 @@ export type ActivePage =
   | 'terms' 
   | 'disclaimer';
 
+import { AuthState } from '../types';
+
 interface SidebarProps {
   activePage: ActivePage;
   onNavigate: (page: ActivePage) => void;
@@ -35,6 +37,9 @@ interface SidebarProps {
   completedLinksCount: number;
   dailyStreak: number;
   onOpenDeployment?: () => void;
+  authState?: AuthState;
+  onOpenLogin?: () => void;
+  onOpenProfile?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -43,6 +48,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
   myTopicsCount,
   completedLinksCount,
   dailyStreak,
+  authState,
+  onOpenLogin,
+  onOpenProfile,
 }) => {
   const mainNavItems = [
     { id: 'overview' as ActivePage, label: 'Overview', icon: LayoutDashboard },
@@ -152,6 +160,55 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </nav>
         </div>
       </div>
+
+      {/* User Account / Storage Card */}
+      {authState && (
+        <div className="mb-3 rounded-[18px] bg-stone-50 p-3 border border-stone-200/80">
+          {authState.isLoggedIn && authState.user ? (
+            <div 
+              onClick={onOpenProfile}
+              className="flex items-center justify-between cursor-pointer group"
+            >
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-400 text-stone-900 font-bold text-xs shrink-0">
+                  {authState.user.name.charAt(0).toUpperCase()}
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-stone-900 truncate group-hover:text-amber-600 transition-colors">
+                    {authState.user.name}
+                  </div>
+                  <div className="text-[10px] text-emerald-600 font-medium flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                    Synced to Cloud
+                  </div>
+                </div>
+              </div>
+              <span className="text-[10px] font-bold text-stone-400 group-hover:text-stone-700">Edit</span>
+            </div>
+          ) : (
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                  Device Storage Mode
+                </span>
+                <span className="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-md font-bold">
+                  Guest
+                </span>
+              </div>
+              <p className="text-[11px] text-stone-600 leading-tight mb-2">
+                All data is saved locally on your device.
+              </p>
+              <button
+                type="button"
+                onClick={onOpenLogin}
+                className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition-all shadow-2xs"
+              >
+                <span>Login to sync</span>
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* User Progress Mini Badge */}
       <div className="rounded-[18px] bg-[#FAF8F5] p-3.5 border border-stone-200/80">

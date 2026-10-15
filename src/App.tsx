@@ -18,6 +18,8 @@ import { LegalPages } from './components/LegalPages';
 import { Footer } from './components/Footer';
 import { ReportModal } from './components/ReportModal';
 import { ExternalLinkConfirmModal } from './components/ExternalLinkConfirmModal';
+import { LoginModal } from './components/LoginModal';
+import { ProfileModal } from './components/ProfileModal';
 import { CATEGORIES } from './data/learningDirectory';
 import { 
   getStoredProgress, 
@@ -26,7 +28,13 @@ import {
   toggleBookmark,
   clearAllHistory
 } from './utils/storage';
-import { UserProgress } from './types';
+import { 
+  getStoredAuthState, 
+  loginUser, 
+  updateUserProfile, 
+  logoutUser 
+} from './utils/authStorage';
+import { UserProgress, AuthState, UserProfile } from './types';
 
 export default function App() {
   const [activePage, setActivePage] = useState<ActivePage>('overview');
@@ -34,10 +42,37 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [progress, setProgress] = useState<UserProgress>(getStoredProgress);
 
+  // Authentication & Profile state
+  const [authState, setAuthState] = useState<AuthState>(getStoredAuthState);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [syncToast, setSyncToast] = useState<string | null>(null);
+
   // Modals state
   const [isReportOpen, setIsReportOpen] = useState(false);
   const [reportTarget, setReportTarget] = useState({ title: '', url: '' });
   const [pendingExternalLink, setPendingExternalLink] = useState<{ url: string; title?: string } | null>(null);
+
+  const handleLogin = (name: string, email: string) => {
+    const { auth, syncMessage } = loginUser(name, email);
+    setAuthState(auth);
+    setSyncToast(syncMessage);
+    setTimeout(() => setSyncToast(null), 4500);
+  };
+
+  const handleUpdateProfile = (updatedFields: Partial<UserProfile>) => {
+    const updated = updateUserProfile(updatedFields);
+    if (updated) {
+      setAuthState(prev => ({ ...prev, user: updated }));
+    }
+  };
+
+  const handleLogout = () => {
+    const newAuth = logoutUser();
+    setAuthState(newAuth);
+    setSyncToast("Logged out. Your learning progress remains safely saved on this device.");
+    setTimeout(() => setSyncToast(null), 4000);
+  };
 
   // Intercept all external link clicks to show confirmation modal
   useEffect(() => {
@@ -160,6 +195,9 @@ export default function App() {
           myTopicsCount={progress.startedTopics.length}
           completedLinksCount={progress.completedLinks.length}
           dailyStreak={progress.dailyStreak}
+          authState={authState}
+          onOpenLogin={() => setIsLoginOpen(true)}
+          onOpenProfile={() => setIsProfileOpen(true)}
         />
 
         {/* Main Workspace Area */}
@@ -170,6 +208,9 @@ export default function App() {
             onSelectTopic={handleSelectTopic}
             dailyStreak={progress.dailyStreak}
             completedCount={progress.completedLinks.length}
+            authState={authState}
+            onOpenLogin={() => setIsLoginOpen(true)}
+            onOpenProfile={() => setIsProfileOpen(true)}
           />
 
           <main className="flex-1 px-4 sm:px-6 lg:px-8 pt-6 max-w-7xl w-full mx-auto">
@@ -274,6 +315,39 @@ export default function App() {
         onConfirm={handleConfirmExternalLink}
         onCancel={handleCancelExternalLink}
       />
+
+      {/* Cloud Login Modal */}
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onLogin={handleLogin}
+        authState={authState}
+      />
+
+      {/* Profile & Skills Showcase Modal */}
+      <ProfileModal
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        authState={authState}
+        onOpenLogin={() => setIsLoginOpen(true)}
+        onUpdateProfile={handleUpdateProfile}
+        onLogout={handleLogout}
+        dailyStreak={progress.dailyStreak}
+        completedCount={progress.completedLinks.length}
+        startedCount={progress.startedTopics.length}
+      />
+
+      {/* Sync Toast Notification */}
+      {syncToast && (
+        <div 
+          role="status" 
+          aria-live="polite"
+          className="fixed bottom-16 lg:bottom-6 right-4 z-50 flex items-center gap-2.5 rounded-2xl bg-stone-900 text-white px-4 py-3 shadow-2xl border border-stone-700 text-xs font-semibold animate-in slide-in-from-bottom duration-300 max-w-sm"
+        >
+          <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-400 shrink-0 animate-ping"></span>
+          <span>{syncToast}</span>
+        </div>
+      )}
     </div>
   );
 }
