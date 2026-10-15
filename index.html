@@ -3,49 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning For Earning – Best Free Learning Websites for Every Skill</title>
-    <meta name="description" content="A curated directory where students and adults discover the best 100% free websites, courses, textbooks, and interactive platforms for every skill." />
     
-    <!-- OpenGraph & Social Metadata -->
+    <!-- Primary Page Title & Brand Identity -->
+    <title>Learning for Earning – Official Hub | Best Free Learning Websites &amp; Courses</title>
+    <meta name="description" content="Learning for Earning (Official Site) – Discover 100% free learning websites, online courses, tutorials, and certifications to build high-income skills at zero cost." />
+    <meta name="keywords" content="Learning for Earning, learning for earning, LearningForEarning, learn for earning, learning to earn, free online courses, free learning websites, free skill certifications, learn high income skills free, free education directory" />
+    <meta name="author" content="Learning for Earning" />
+    <meta name="application-name" content="Learning for Earning" />
+    <meta name="apple-mobile-web-app-title" content="Learning for Earning" />
+
+    <!-- Search Engine Indexing & Bot Directives -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Google Search Console Verification Meta Tags -->
+    <meta name="google-site-verification" content="googled57c51397ea6b152.html" />
+    <meta name="google-site-verification" content="googled57c51397ea6b152" />
+    <meta name="google-site-verification" content="d57c51397ea6b152" />
+
+    <!-- Canonical URL (dynamically set to current location) -->
+    <link id="canonical-url" rel="canonical" href="" />
+    <script>
+      (function() {
+        try {
+          var canon = document.getElementById('canonical-url');
+          if (canon) {
+            canon.href = window.location.origin + window.location.pathname;
+          }
+        } catch(e) {}
+      })();
+    </script>
+
+    <!-- OpenGraph Social Metadata -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Learning For Earning – Best Free Learning Websites for Every Skill" />
-    <meta property="og:description" content="Curated free learning directory with the top 3-4 free resources per topic across programming, science, math, design, finance, and life skills." />
-    <meta property="og:site_name" content="Learning For Earning" />
+    <meta property="og:site_name" content="Learning for Earning" />
+    <meta property="og:title" content="Learning for Earning – Official Website | Free Learning for Every Skill" />
+    <meta property="og:description" content="Find the top 3-4 manually vetted, 100% free websites and courses for every skill across coding, business, finance, design, and science." />
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Learning For Earning – Best Free Learning Websites for Every Skill" />
+    <meta name="twitter:title" content="Learning for Earning – Official Website" />
     <meta name="twitter:description" content="Discover verified free learning resources across 22+ domains without paywalls or hidden subscriptions." />
 
-    <!-- Google Fonts: Plus Jakarta Sans for friendly modern sans-serif -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Schema.org JSON-LD Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data: WebSite, EducationalOrganization & FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Learning For Earning",
-      "url": "https://learnfreehub.org",
-      "description": "A curated directory where students and adults discover the best free websites, courses, and textbooks for every skill.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://learnfreehub.org/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://learningforearning.org/#website",
+          "name": "Learning for Earning",
+          "alternateName": ["LearningForEarning", "Learning for Earning Hub", "Learn for Earning"],
+          "description": "Learning for Earning is an open directory curated with the best 100% free learning websites, courses, and skills to help learners earn.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://learningforearning.org/#organization",
+          "name": "Learning for Earning",
+          "alternateName": "LearningForEarning",
+          "description": "Free open educational resource directory offering vetted learning paths in computer science, mathematics, humanities, and professional skills.",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://learningforearning.org/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Learning for Earning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Learning for Earning is an open curated directory that connects students, adults, and career changers to the best 100% free websites, courses, and learning materials for in-demand skills."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Learning for Earning completely free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Learning for Earning is 100% free forever. We do not sell courses, require paid subscriptions, or promote paywalled content."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Learning for Earning help you earn?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Learning for Earning guides you directly to the highest-quality free resources to learn high-income skills such as programming, web development, data analysis, UI/UX design, and digital marketing."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Learning For Earning",
-      "url": "https://learnfreehub.org",
-      "description": "Free open educational resource directory offering vetted learning paths in computer science, mathematics, humanities, and professional skills."
-    }
-    </script>
+
     <!-- GitHub Pages fallback detector: if uncompiled root (/) is served, redirect to /docs/ -->
     <script>
       window.addEventListener('error', function(e) {
@@ -62,4 +122,3 @@
     <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
-

@@ -432,7 +432,61 @@ export const Dashboard: React.FC<DashboardProps> = ({
         </section>
       </div>
 
-      {/* 4. Directory Quick Facts Bar */}
+      {/* 4. SEO & Knowledge FAQ: Learning for Earning */}
+      <section aria-labelledby="seo-faq-heading" className="rounded-2xl sm:rounded-3xl border border-stone-200/90 bg-white p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="border-b border-stone-100 pb-4">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-900">
+            <Sparkles className="h-3.5 w-3.5 text-amber-700" />
+            Knowledge &amp; Guide
+          </div>
+          <h2 id="seo-faq-heading" className="text-xl sm:text-2xl font-black text-stone-900 mt-2 tracking-tight">
+            Frequently Asked Questions About Learning for Earning
+          </h2>
+          <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-2xl">
+            Everything you need to know about the Learning for Earning free educational directory and how to build job-ready skills without paywalls.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="rounded-2xl border border-stone-100 bg-[#FAF8F5] p-5 space-y-2">
+            <h3 className="text-sm font-extrabold text-stone-900">
+              1. What is Learning for Earning?
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              <strong>Learning for Earning</strong> is a 100% free online guide and directory. We handpick the world's highest-quality, open-access websites, video series, interactive tutorials, and textbooks so learners can master in-demand skills without paying expensive course fees.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-stone-100 bg-[#FAF8F5] p-5 space-y-2">
+            <h3 className="text-sm font-extrabold text-stone-900">
+              2. How is Learning for Earning unique?
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Unlike generic lists or confusing searches (such as <em>learning with earning</em> or sponsored ad listings), <strong>Learning for Earning</strong> limits every topic to strictly the top 3–4 vetted, zero-cost links so you can focus immediately on learning without overwhelm.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-stone-100 bg-[#FAF8F5] p-5 space-y-2">
+            <h3 className="text-sm font-extrabold text-stone-900">
+              3. Which skills can I learn to start earning?
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              You can learn Web Development, Python, Machine Learning, Data Analytics, Graphic Design, Digital Marketing, Mathematics, and Freelancing skills—all through verified platforms like MIT OpenCourseWare, freeCodeCamp, Harvard CS50, and Khan Academy.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-stone-100 bg-[#FAF8F5] p-5 space-y-2">
+            <h3 className="text-sm font-extrabold text-stone-900">
+              4. Are there any hidden fees or subscriptions?
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              No. Every single resource linked on Learning for Earning is verified for a truly free learning tier. We never charge users, sell courses, or gate educational paths.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Directory Quick Facts Bar */}
       <section className="rounded-[20px] bg-stone-900 text-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-1.5 text-center md:text-left">
           <div className="inline-flex items-center gap-2 rounded-full bg-stone-800 px-3 py-1 text-xs text-amber-400 font-semibold">
